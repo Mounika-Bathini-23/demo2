@@ -1,0 +1,17 @@
+name : Build and run docker
+
+on:
+  push:
+    branches:
+      - feature/docker
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cheeckout code
+        uses: actions/checkout@v3
+      - name : build docker image
+        run : docker build -t mypracticeimage
+      - name : Run docker container
+        run : docker run mypracticeimage
+        
