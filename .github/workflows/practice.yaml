@@ -11,7 +11,7 @@ jobs:
       - name: cheeckout code
         uses: actions/checkout@v3
       - name : build docker image
-        run : docker build -t mypracticeimage
+        run : docker build -t mypracticeimage .
       - name : Run docker container
         run : docker run mypracticeimage
         
